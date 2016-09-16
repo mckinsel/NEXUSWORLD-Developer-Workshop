@@ -1,0 +1,61 @@
+entries:
+  - title: sidebar
+    product: Developer Workshop
+    folders:
+    - title: Get Started
+      output: web
+      folderitems:
+      - title: Workshop Overview
+        output: web
+        url: /index.html
+    - title: HISAT2
+      output: web
+      folderitems:
+      - title: Do You Need an Applet?
+        output: web
+        url: /tutorial_do_you_need_an_applet.html
+      - title: Organizing a Pipeline
+        output: web
+        url: /tutorial_organizing_a_pipeline.html
+      - title: Basic HISAT2 Applet
+        output: web
+        url: /tutorial_basic_hisat2_applet.html
+      - title: Debugging and Error Handling
+        output: web
+        url: /tutorial_debugging_and_error_handling.html
+      - title: Applet Building Tips
+        output: web
+        url: /tutorial_applet_building_tips.html
+      - title: Adding Options
+        output: web
+        url: /tutorial_adding_options.html
+      - title: Improving File I/O
+        output: web
+        url: /tutorial_streamlining_file_io.html
+      - title: Reaching Outside the Applet
+        output: web
+        url: /tutorial_reaching_outside_the_applet.html
+      - title: Parallelization
+        output: web
+        url: /tutorial_parallelization.html
+    - title: StringTie
+      output: web
+      folderitems:
+      - title: Basic StringTie Applet
+        output: web
+        url: /tutorial_basic_stringtie_applet.html
+      - title: Data Streaming
+        output: web
+        url: /tutorial_data_streaming.html
+      - title: Distributed Computing
+        output: web
+        url: /tutorial_distributed_computing.html
+    - title: Ballgown
+      output: web
+      folderitems:
+      - title: Complex Dependencies
+        output: web
+        url: /tutorial_complex_dependencies.html
+      - title: Putting It All Together
+        output: web
+        url: /tutorial_putting_it_all_together.html
