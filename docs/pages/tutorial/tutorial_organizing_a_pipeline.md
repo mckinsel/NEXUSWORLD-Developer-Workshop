@@ -13,7 +13,7 @@ applet, how should work be divided among them?
 
 Recall the schematic of the pipeline we're implementing:
 
-{% include image.html file="DE_Pipeline.png" caption="Analysis schematic" %}
+{% include image.html file="DE_pipeline.png" caption="Analysis schematic" %}
 
 There are five different executions of a command line tool, and some of those
 executions are run per sample. On one extreme, we could run everything in one
@@ -58,7 +58,7 @@ Worse file I/O
 For our RNA-seq pipeline, we'll break it up into three applets: one that runs
 HISAT2, one that runs the three StringTie steps, and one that runs Ballgown.
 
-{% include image.html file="DE_Pipeline_broken_up.png" caption="Division into applets" %}
+{% include image.html file="DE_pipeline_broken_up.png" caption="Division into applets" %}
 
 Ballgown is an R application, so separating it lets us address its resource
 needs separately. Splitting up HISAT2 and StringTie gives us a nice checkpoint
