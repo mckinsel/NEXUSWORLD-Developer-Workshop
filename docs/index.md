@@ -46,7 +46,7 @@ transcript assembly and quantification, and
 expression analysis. The authors have provided a schematic describing how the
 different tools fit together within their recommended pipeline:
 
-{% include image.html file="DE_Pipeline.png" caption="Analysis schematic" %}
+{% include image.html file="DE_pipeline.png" caption="Analysis schematic" %}
 
 ## Workshop Structure
 
