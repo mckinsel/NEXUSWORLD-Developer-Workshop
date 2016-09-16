@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" getting_started">
+<title>Organizing a Pipeline | DNAnexus Developer Workshop</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://idratherbewriting.comfeed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> NEXUSWORLD Live Connect</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">DNAnexus Resources<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="https://platform.dnanexus.com" target="_blank">DNAnexus Platform</a></li>
+                        
+                        
+                        
+                        <li><a href="https://wiki.dnanexus.com" target="_blank">DNAnexus Wiki</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Organizing a Pipeline">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          
+
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle">Developer Workshop </li>
+    
+    
+    
+    <li>
+        <a href="#">Get Started</a>
+        <ul>
+            
+            
+            
+            <li><a href="index.html">Workshop Overview</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">HISAT2</a>
+        <ul>
+            
+            
+            
+            <li><a href="tutorial_do_you_need_an_applet.html">Do You Need an Applet?</a></li>
+            
+            
+            
+            
+            
+            
+            <li class="active"><a href="tutorial_organizing_a_pipeline.html">Organizing a Pipeline</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="tutorial_basic_hisat2_applet.html">Basic HISAT2 Applet</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="tutorial_debugging_and_error_handling.html">Debugging and Error Handling</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="tutorial_applet_building_tips.html">Applet Building Tips</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="tutorial_adding_options.html">Adding Options</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="tutorial_streamlining_file_io.html">Improving File I/O</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="tutorial_reaching_outside_the_applet.html">Reaching Outside the Applet</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="tutorial_parallelization.html">Parallelization</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">StringTie</a>
+        <ul>
+            
+            
+            
+            <li><a href="tutorial_basic_stringtie_applet.html">Basic StringTie Applet</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="tutorial_data_streaming.html">Data Streaming</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="tutorial_distributed_computing.html">Distributed Computing</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Ballgown</a>
+        <ul>
+            
+            
+            
+            <li><a href="tutorial_complex_dependencies.html">Complex Dependencies</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="tutorial_putting_it_all_together.html">Putting It All Together</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+    </li>
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+    <!-- Content Column -->
+    <div class="col-md-9">
+        <div class="post-header">
+   <h1 class="post-title-main">Organizing a Pipeline</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+    
+
+    
+
+    
+
+  <h2 id="breaking-a-pipeline-into-applets">Breaking a Pipeline into Applets</h2>
+
+<p>Since we’ll want our RNA-seq pipeline to be reproducible and easy to run, we’re
+going to build an applet. But how many applets? And if there’s more than one
+applet, how should work be divided among them?</p>
+
+<p>Recall the schematic of the pipeline we’re implementing:</p>
+
+<figure><img class="docimage" src="images/DE_Pipeline.png" alt="" /><figcaption>Analysis schematic</figcaption></figure>
+
+<p>There are five different executions of a command line tool, and some of those
+executions are run per sample. On one extreme, we could run everything in one
+applet, which would mean it would all run in a single remote computer. On the
+other extreme, we could break everything into separate applets, so that each
+sample/tool combination gets its own applet. There are trade-offs with each
+approach.</p>
+
+<h3 id="applet-trade-offs">Applet Trade-offs</h3>
+
+<dl>
+  <dt>Better recovery and restartability</dt>
+  <dd>When work is split up among different applets, it’s easier to restart the
+pipeline from the middle if one step should fail. If everything is
+run within one applet, the pipeline will have to begin from the start.</dd>
+  <dt>Better tuning of resources</dt>
+  <dd>Some steps of a pipeline may require a lot of CPU or a lot of memory while
+others do not. Running steps in separate applets allows the selection of
+instance types most appropriate for each step.</dd>
+  <dt>Better modularity</dt>
+  <dd>This can be double-edged sword, but more applets means that it’s easier to
+reuse and test components of your pipeline. Taken too far, however, it can
+make it laborious to accomplish simple tasks.</dd>
+  <dt>Worse overhead</dt>
+  <dd>Each applet runs on a separate worker, and each worker takes some time to
+get started. This can range from around 15 seconds to several tens of minutes.
+Breaking up a pipeline into many small, quick-running applets can mean that
+most of the resources dedicated to running the pipeline are actually used
+starting up workers.</dd>
+  <dt>Worse file I/O</dt>
+  <dd>Each applet runs on a separate worker, and workers don’t have a shared
+filesystem between them. So, input and reference files generally have to be
+downloaded to each worker. Having many, small applets can increase running
+time by increasing the time spent transferring files to and from workers.</dd>
+</dl>
+
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Anti-Pattern:</b> Sometimes users coming from environments like SGE intuit that very finely breaking down tasks into many applets will improve execution speed on DNAnexus. But unlike may grid engine environments, the overhead to starting a job on DNAnexus is rather high. So, this will actually greatly slow down execution time. If job running times in a long-running, multi-step pipeline are less than ten minutes or so, consider coalescing steps into fewer applets.</div>
+
+<h2 id="rna-seq-pipeline-organization">RNA-seq Pipeline Organization</h2>
+
+<p>For our RNA-seq pipeline, we’ll break it up into three applets: one that runs
+HISAT2, one that runs the three StringTie steps, and one that runs Ballgown.</p>
+
+<figure><img class="docimage" src="images/DE_Pipeline_broken_up.png" alt="" /><figcaption>Division into applets</figcaption></figure>
+
+<p>Ballgown is an R application, so separating it lets us address its resource
+needs separately. Splitting up HISAT2 and StringTie gives us a nice checkpoint
+between to steps that are likely compute-intensive. And combining the three
+StringTie steps together means that we don’t have to transfer assembled
+transcripts and merged transcripts back and forth from platform to worker.</p>
+
+
+    <div class="tags">
+        
+    </div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2016 DNAnexus. All rights reserved. <br />
+ Site last generated: Sep 16, 2016 <br />
+<p><img src="images/company_logo.png" alt="Company logo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>

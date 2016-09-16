@@ -1,0 +1,92 @@
+[
+
+
+
+
+{
+"title": "Getting Started - DNAnexus Developer Workshop",
+"tags": "",
+"keywords": "getting_started",
+"url": "index.html",
+"summary": ""
+},
+
+
+
+{
+"title": "Scroll layout",
+"tags": "special_layouts",
+"keywords": "json, scrolling, scrollto, jquery plugin",
+"url": "jsmydoc_scroll.html",
+"summary": "This page demonstrates how you the integration of a script called ScrollTo, which is used here to link definitions of a JSON code sample to a list of definitions for that particular term. The scenario here is that the JSON blocks are really long, with extensive nesting and subnesting, which makes it difficult for tables below the JSON to adequately explain the term in a usable way."
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+"title": "Basic HISAT2 Applet",
+"tags": "",
+"keywords": "hisat2",
+"url": "tutorial_basic_hisat2_applet.html",
+"summary": ""
+},
+
+
+
+{
+"title": "Do You Need an Applet?",
+"tags": "",
+"keywords": "getting_started",
+"url": "tutorial_do_you_need_an_applet.html",
+"summary": ""
+},
+
+
+
+{
+"title": "Organizing a Pipeline",
+"tags": "",
+"keywords": "getting_started",
+"url": "tutorial_organizing_a_pipeline.html",
+"summary": ""
+},
+
+
+
+
+
+]
