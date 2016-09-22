@@ -4,8 +4,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
-<meta name="keywords" content=" getting_started">
-<title>Do You Need an Applet? | DNAnexus Developer Workshop</title>
+<meta name="keywords" content=" hisat2">
+<title>Accessing the Platform and the Internet | DNAnexus Developer Workshop</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -130,7 +130,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Do You Need an Applet?">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Accessing the Platform and the Internet">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -181,7 +181,7 @@
             
             
             
-            <li class="active"><a href="tutorial_do_you_need_an_applet.html">Do You Need an Applet?</a></li>
+            <li><a href="tutorial_do_you_need_an_applet.html">Do You Need an Applet?</a></li>
             
             
             
@@ -230,7 +230,7 @@
             
             
             
-            <li><a href="tutorial_accessing_the_platform_and_the_internet.html">Accessing the Platform and the Internet</a></li>
+            <li class="active"><a href="tutorial_accessing_the_platform_and_the_internet.html">Accessing the Platform and the Internet</a></li>
             
             
             
@@ -305,7 +305,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">Do You Need an Applet?</h1>
+   <h1 class="post-title-main">Accessing the Platform and the Internet</h1>
 </div>
 
 
@@ -345,42 +345,9 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <p>Before delving into the details of how to build applets and workflows on
-DNAnexus, it’s worth considering whether you can accomplish your goal without
-one. For one-off or experimental tasks, there are ways to run code and tools
-without having to build a new applet. These approached give up some
-reproducibility and auditability, but they’re very quick and easy to use.</p>
+  <h2 id="accessing-the-platform">Accessing the Platform</h2>
 
-<h2 id="swiss-army-knife">Swiss Army Knife</h2>
-
-<p>In some cases, you want to run a command or two on some files and get the output.
-For example, you might want to merge overlapping entries in a BED file using a <a href="http://bedtools.readthedocs.io/en/latest/">bedtools</a>
-command. You could create an applet that has a BED file input and a merged BED
-file output, or you could just type the command and run it using the Swiss Army
-Knife app.</p>
-
-<p>The Swiss Army Knife app takes an arbitrary list of files and a command string
-as inputs. It downloads all the files, runs the command, and uploads any
-new files. So, we could just add our BED file as an input and type in the
-appropriate command:</p>
-
-<figure><img class="docimage" src="images/swiss_army_knife_example.png" alt="Swiss Army Knife" /><figcaption></figcaption></figure>
-
-<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> When using Swiss Army Knife, it’s often useful to refer to input files using wildcards, like *.bed, so the command can be independent of the specific input files. It also allows you to refer to multiple files at once.</div>
-
-<p>The Swiss Army Knife app has a number of tools built-in, so you can refer to them
-in commands. The list of tools and more information are available on the <a href="https://platform.dnanexus.com/app/swiss-army-knife">apps page</a>.</p>
-
-<h2 id="cloud-workstation">Cloud Workstation</h2>
-
-<p>In other cases, you want to work interactively on a remote computer that has
-fast access to files stored on the DNAnexus platform as well as the rest of the
-internet. You also may want to work on a computer with specific resources, like
-32 cores or 200 GiB of memory. This can be accomplished with the Cloud
-Workstation app. The Cloud Workstation app simply runs a DNAnexus worker for a
-specified period of time that you can SSH into.</p>
-
-<p>The Cloud Workstation app is described in the <a href="https://wiki.dnanexus.com/Developer-Tutorials/Cloud-Workstations">DNAnexus Wiki</a>.</p>
+<h2 id="accessing-the-internet">Accessing the Internet</h2>
 
 
     <div class="tags">

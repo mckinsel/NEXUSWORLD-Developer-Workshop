@@ -7,7 +7,7 @@ permalink: index.html
 
 ## Workshop Goals
 
-In this workshop, we're going to walk through how to implement tools on the
+In this workshop, we are going to walk through how to implement tools on the
 DNAnexus platform. We'll identify best practices, patterns to avoid, and
 provide some templates and code snippets useful for future work.
 
@@ -52,8 +52,10 @@ different tools fit together within their recommended pipeline:
 
 We'll build up the executable that runs the pipeline iteratively. As we expand
 on each component, we'll address issues that arise when developing on DNAnexus
-and find solutions to common
+and describe the reasoning behind some best practices.
 
-Throughout the
+The workshop is broken into sections that each address some theme of applet
+development. Each section has a link to a directory in a github repository that
+contains the code for the applets described in the section.
 
 {% include links.html %}

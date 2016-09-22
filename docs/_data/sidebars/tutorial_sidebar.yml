@@ -23,18 +23,18 @@ entries:
       - title: Debugging and Error Handling
         output: web
         url: /tutorial_debugging_and_error_handling.html
-      - title: Applet Building Tips
+      - title: Improving Execution
         output: web
-        url: /tutorial_applet_building_tips.html
+        url: /tutorial_improving_execution.html
+      - title: Improving File I/O
+        output: web
+        url: /tutorial_improving_file_io.html
       - title: Adding Options
         output: web
         url: /tutorial_adding_options.html
-      - title: Improving File I/O
+      - title: Accessing the Platform and the Internet
         output: web
-        url: /tutorial_streamlining_file_io.html
-      - title: Reaching Outside the Applet
-        output: web
-        url: /tutorial_reaching_outside_the_applet.html
+        url: /tutorial_accessing_the_platform_and_the_internet.html
       - title: Parallelization
         output: web
         url: /tutorial_parallelization.html
@@ -44,9 +44,6 @@ entries:
       - title: Basic StringTie Applet
         output: web
         url: /tutorial_basic_stringtie_applet.html
-      - title: Data Streaming
-        output: web
-        url: /tutorial_data_streaming.html
       - title: Distributed Computing
         output: web
         url: /tutorial_distributed_computing.html

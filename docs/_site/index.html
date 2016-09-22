@@ -35,7 +35,7 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<link rel="alternate" type="application/rss+xml" title="" href="http://idratherbewriting.comfeed.xml">
+<link rel="alternate" type="application/rss+xml" title="" href="http://www.dnanexus.comfeed.xml">
 
     <script>
         $(document).ready(function() {
@@ -88,7 +88,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="fa fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> NEXUSWORLD Live Connect</span></a>
+            <a class="fa fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> DNAnexus Connect Developer Workshop</span></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
@@ -209,7 +209,14 @@
             
             
             
-            <li><a href="tutorial_applet_building_tips.html">Applet Building Tips</a></li>
+            <li><a href="tutorial_improving_execution.html">Improving Execution</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="tutorial_improving_file_io.html">Improving File I/O</a></li>
             
             
             
@@ -223,14 +230,7 @@
             
             
             
-            <li><a href="tutorial_streamlining_file_io.html">Improving File I/O</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="tutorial_reaching_outside_the_applet.html">Reaching Outside the Applet</a></li>
+            <li><a href="tutorial_accessing_the_platform_and_the_internet.html">Accessing the Platform and the Internet</a></li>
             
             
             
@@ -253,13 +253,6 @@
             
             
             <li><a href="tutorial_basic_stringtie_applet.html">Basic StringTie Applet</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="tutorial_data_streaming.html">Data Streaming</a></li>
             
             
             
@@ -354,7 +347,7 @@ $('#toc').on('click', 'a', function() {
 
   <h2 id="workshop-goals">Workshop Goals</h2>
 
-<p>In this workshop, we’re going to walk through how to implement tools on the
+<p>In this workshop, we are going to walk through how to implement tools on the
 DNAnexus platform. We’ll identify best practices, patterns to avoid, and
 provide some templates and code snippets useful for future work.</p>
 
@@ -406,9 +399,11 @@ different tools fit together within their recommended pipeline:</p>
 
 <p>We’ll build up the executable that runs the pipeline iteratively. As we expand
 on each component, we’ll address issues that arise when developing on DNAnexus
-and find solutions to common</p>
+and describe the reasoning behind some best practices.</p>
 
-<p>Throughout the</p>
+<p>The workshop is broken into sections that each address some theme of applet
+development. Each section has a link to a directory in a github repository that
+contains the code for the applets described in the section.</p>
 
 
 
@@ -426,7 +421,7 @@ and find solutions to common</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2016 DNAnexus. All rights reserved. <br />
- Site last generated: Sep 16, 2016 <br />
+ Site last generated: Sep 22, 2016 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>

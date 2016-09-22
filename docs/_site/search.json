@@ -58,6 +58,26 @@
 
 
 {
+"title": "Accessing the Platform and the Internet",
+"tags": "",
+"keywords": "hisat2",
+"url": "tutorial_accessing_the_platform_and_the_internet.html",
+"summary": ""
+},
+
+
+
+{
+"title": "Adding Options",
+"tags": "",
+"keywords": "hisat2",
+"url": "tutorial_adding_options.html",
+"summary": ""
+},
+
+
+
+{
 "title": "Basic HISAT2 Applet",
 "tags": "",
 "keywords": "hisat2",
@@ -68,10 +88,40 @@
 
 
 {
+"title": "Debugging and Error Handling",
+"tags": "",
+"keywords": "hisat2",
+"url": "tutorial_debugging_and_error_handling.html",
+"summary": ""
+},
+
+
+
+{
 "title": "Do You Need an Applet?",
 "tags": "",
 "keywords": "getting_started",
 "url": "tutorial_do_you_need_an_applet.html",
+"summary": ""
+},
+
+
+
+{
+"title": "Improving Execution",
+"tags": "",
+"keywords": "hisat2",
+"url": "tutorial_improving_execution.html",
+"summary": ""
+},
+
+
+
+{
+"title": "Improving File I/O",
+"tags": "",
+"keywords": "hisat2",
+"url": "tutorial_improving_file_io.html",
 "summary": ""
 },
 
