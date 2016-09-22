@@ -1,0 +1,46 @@
+{
+  "name": "basic_hisat2_applet_python",
+  "title": "Basic HISAT2 Applet (python)",
+  "summary": "Simply downloads input files, runs HISAT2, and upload the output SAM.",
+  "description": "This is a starting point for a more sophisticated implementation of HISAT2 on DNAnexus.",
+  "version": "0.0.1",
+  "inputSpec": [
+    {
+      "name": "hisat2_index_targz",
+      "label": "HISAT2 Index Tarball",
+      "class": "file",
+      "help": "Tar.gz'd HISAT2 index for a reference genome, produced using hisat2-build.",
+      "patterns": ["*.tar.gz"]
+    },
+    {
+      "name": "mate1_fastqgz",
+      "label": "Mate 1 FASTQ (gzipped)",
+      "class": "file",
+      "help": "Gzipped FASTQ file containing mate 1 reads.",
+      "patterns": ["*.fq.gz", "*.fastq.gz"]
+    },
+    {
+      "name": "mate2_fastqgz",
+      "label": "Mate 2 FASTQ (gzipped)",
+      "class": "file",
+      "help": "Gzipped FASTQ file containing mate 2 reads.",
+      "patterns": ["*.fq.gz", "*.fastq.gz"]
+    }
+  ],
+  "outputSpec": [
+    {
+      "name": "aligned_bam",
+      "label": "Aligned BAM",
+      "class": "file",
+      "help": "BAM file with alignments reported by HISAT2"
+    }
+  ],
+  "runSpec": {
+    "file": "src/script.py",
+    "interpreter": "python2.7",
+    "systemRequirements": {"*": "instanceType": "mem1_ssd1_x16"},
+    "timeoutPolicy": {"*": {"hours": 12}},
+    "distribution": "Ubuntu",
+    "release": "14.04"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "basic_hisat2_applet_python",
+  "title": "Basic HISAT2 Applet (python)",
+  "summary": "Simply downloads input files, runs HISAT2, and upload the output SAM.",
+  "description": "This is a starting point for a more sophisticated implementation of HISAT2 on DNAnexus.",
+  "inputSpec": [
+    {
+      "name": "hisat2_index_targz",
+      "label": "HISAT2 Index Tarball",
+      "class": "file",
+      "help": "Tar.gz'd HISAT2 index for a reference genome, produced using hisat2-build."
+    },
+    {
+      "name": "mate1_fastq",
+      "label": "Mate 1 FASTQ",
+      "class": "file",
+      "help": "FASTQ file containing mate 1 reads."
+    },
+    {
+      "name": "mate2_fastq",
+      "label": "Mate 2 FASTQ",
+      "class": "file",
+      "help": "FASTQ file containing mate 2 reads."
+    }
+  ],
+  "outputSpec": [
+    {
+      "name": "aligned_sam",
+      "label": "Aligned SAM",
+      "class": "file",
+      "help": "SAM file with alignments reported by HISAT2"
+    }
+  ],
+  "runSpec": {
+    "file": "src/script.py",
+    "interpreter": "python2.7"
+  }
+}
